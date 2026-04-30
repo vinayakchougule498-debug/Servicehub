@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Glassmorphism & Service Provider Theme -->
+    <color name="glass_white">#40FFFFFF</color>
+    <color name="glass_border">#20FFFFFF</color>
+
+    <color name="grad_start">#E6D29A</color>
+    <color name="grad_middle">#D4EAD8</color>
+    <color name="grad_end">#7FB3A1</color>
+
+    <color name="text_dark">#2C3E50</color>
+    <color name="text_hint">#7F8C8D</color>
+    <color name="accent_yellow">#F1C40F</color>
+    <color name="accent_orange">#FF7043</color>
+
+    <color name="primary">#7FB3A1</color>
+    <color name="secondary">#E6D29A</color>
+    <color name="background">#F8F9FA</color>
+
+    <!-- Missing colors causing build error in item_service.xml -->
+    <color name="card_bg">#FFFFFF</color>
+    <color name="text_primary">#2C3E50</color>
+    <color name="text_secondary">#7F8C8D</color>
+
+    <!-- Legacy support for music theme if needed by build -->
+    <color name="cassette_bg">#F06292</color>
+    <color name="cassette_card">#FCE4EC</color>
+    <color name="cassette_text_title">#37474F</color>
+    <color name="cassette_text_subtitle">#78909C</color>
+    <color name="track_blue">#2196F3</color>
+    <color name="track_red">#F44336</color>
+    <color name="track_green">#4CAF50</color>
+    <color name="track_orange">#FF9800</color>
+    <color name="player_bar_bg">#FCE4EC</color>
+    <color name="nav_selected">#EC407A</color>
+</resources>

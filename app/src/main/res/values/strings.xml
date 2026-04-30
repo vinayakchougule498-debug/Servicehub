@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Service Hub</string>
+    <string name="banner_text">LOREM IPSUM\n50% OFF</string>
+    <string name="find_service_hint">Find a service</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_history">History</string>
+    <string name="nav_notifications">Notifications</string>
+    <string name="nav_profile">Profile</string>
+    <string name="user_name">James Carter</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="welcome_message">Welcome Home,\nEnjoy Services</string>
+    <string name="search_hint">Home/Regon</string>
+    <string name="category_label">Category</string>
+</resources>

@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ServiceHub" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/primary</item> -->
+    </style>
+
+    <style name="Theme.ServiceHub" parent="Base.Theme.ServiceHub" />
+
+    <style name="CircleImage">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="RoundedImage">
+        <item name="cornerSize">24dp</item>
+    </style>
+</resources>
