@@ -52,6 +52,7 @@
             app:strokeWidth="4dp" />
 
         <TextView
+            android:id="@+id/tvProfileName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -61,6 +62,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/tvProfileEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="james.carter@email.com"
@@ -77,16 +79,7 @@
         app:layout_constraintTop_toBottomOf="@id/profileInfo">
 
         <com.google.android.material.button.MaterialButton
-            style="@style/Widget.MaterialComponents.Button.TextButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="start|center_vertical"
-            android:text="Edit Profile"
-            android:textColor="@color/text_dark"
-            app:icon="@android:drawable/ic_menu_edit"
-            app:iconTint="@color/text_dark" />
-
-        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPaymentMethods"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -97,6 +90,7 @@
             app:iconTint="@color/text_dark" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSettings"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -105,6 +99,17 @@
             android:textColor="@color/text_dark"
             app:icon="@android:drawable/ic_menu_preferences"
             app:iconTint="@color/text_dark" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogout"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center_vertical"
+            android:text="Logout"
+            android:textColor="#E53935"
+            app:icon="@android:drawable/ic_lock_power_off"
+            app:iconTint="#E53935" />
 
     </LinearLayout>
 

@@ -28,3 +28,11 @@ data class Booking(
     val status: String, // "Completed", "In Process", "Cancelled"
     val imageRes: Int
 )
+
+data class NotificationItem(
+    val id: Int,
+    val title: String,
+    val message: String,
+    val time: String,
+    val iconRes: Int
+)

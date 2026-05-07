@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".BookingsActivity">
+    tools:context=".NotificationsActivity">
 
     <!-- Header -->
     <LinearLayout
-        android:id="@+id/bookingsHeader"
+        android:id="@+id/notifHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
@@ -27,87 +27,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="MY BOOKINGS"
+            android:text="NOTIFICATIONS"
             android:textColor="@color/text_dark"
             android:textSize="18sp"
             android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- Tabs -->
-    <HorizontalScrollView
-        android:id="@+id/tabScroll"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingVertical="8dp"
-        android:scrollbars="none"
-        app:layout_constraintTop_toBottomOf="@id/bookingsHeader">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="16dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/tabAll"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_nav_active"
-                android:paddingHorizontal="24dp"
-                android:paddingVertical="8dp"
-                android:text="All"
-                android:textColor="@color/white"
-                android:clickable="true"
-                android:focusable="true" />
-
-            <TextView
-                android:id="@+id/tabCompleted"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:paddingHorizontal="16dp"
-                android:paddingVertical="8dp"
-                android:text="Completed"
-                android:textColor="@color/text_hint"
-                android:clickable="true"
-                android:focusable="true" />
-
-            <TextView
-                android:id="@+id/tabInProcess"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:paddingHorizontal="16dp"
-                android:paddingVertical="8dp"
-                android:text="In Process"
-                android:textColor="@color/text_hint"
-                android:clickable="true"
-                android:focusable="true" />
-
-            <TextView
-                android:id="@+id/tabCancelled"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:paddingHorizontal="16dp"
-                android:paddingVertical="8dp"
-                android:text="Cancelled"
-                android:textColor="@color/text_hint"
-                android:clickable="true"
-                android:focusable="true" />
-        </LinearLayout>
-    </HorizontalScrollView>
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvBookings"
+        android:id="@+id/rvNotifications"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:padding="16dp"
         app:layout_constraintBottom_toTopOf="@id/bottomNavContainer"
-        app:layout_constraintTop_toBottomOf="@id/tabScroll"
-        tools:listitem="@layout/item_booking" />
+        app:layout_constraintTop_toBottomOf="@id/notifHeader"
+        tools:listitem="@layout/item_notification" />
 
-    <!-- Bottom Nav (Shared style) -->
+    <!-- Bottom Nav -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/bottomNavContainer"
         android:layout_width="match_parent"
@@ -140,7 +75,6 @@
                 android:layout_height="48dp"
                 android:layout_weight="1"
                 android:padding="12dp"
-                android:background="@drawable/bg_nav_active"
                 android:src="@android:drawable/ic_menu_recent_history" />
 
             <ImageView
@@ -149,6 +83,7 @@
                 android:layout_height="48dp"
                 android:layout_weight="1"
                 android:padding="12dp"
+                android:background="@drawable/bg_nav_active"
                 android:src="@android:drawable/ic_popup_reminder" />
 
             <ImageView

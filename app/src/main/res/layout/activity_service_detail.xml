@@ -76,10 +76,11 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/tvServiceDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                android:text="Expert services at your doorstep. Professional and reliable providers ready to help."
                 android:textColor="@color/text_hint"
                 android:textSize="14sp" />
 

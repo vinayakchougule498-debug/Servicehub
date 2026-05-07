@@ -11,6 +11,7 @@
     app:strokeWidth="1dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/featuredServiceBg"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -19,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@android:drawable/ic_menu_gallery"
+            android:src="@drawable/img_home_cleaning"
             app:shapeAppearanceOverlay="@style/RoundedImage" />
 
         <View

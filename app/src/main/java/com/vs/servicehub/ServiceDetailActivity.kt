@@ -1,5 +1,6 @@
 package com.vs.servicehub
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
@@ -10,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.button.MaterialButton
 
 class ServiceDetailActivity : AppCompatActivity() {
+
+    private lateinit var providerAdapter: ProviderAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +29,16 @@ class ServiceDetailActivity : AppCompatActivity() {
         setupProvidersList(serviceName)
 
         findViewById<MaterialButton>(R.id.btnBook).setOnClickListener {
-            Toast.makeText(this, "Booking request sent!", Toast.LENGTH_LONG).show()
+            val selectedProvider = providerAdapter.getSelectedProvider()
+            if (selectedProvider != null) {
+                // Open User Booking Page
+                val intent = Intent(this, UserBookingActivity::class.java)
+                intent.putExtra("PROVIDER_NAME", selectedProvider.name)
+                intent.putExtra("SERVICE_NAME", serviceName)
+                startActivity(intent)
+            } else {
+                Toast.makeText(this, "Please select a provider first", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
@@ -35,7 +47,8 @@ class ServiceDetailActivity : AppCompatActivity() {
 
         val rv: RecyclerView = findViewById(R.id.rvProviders)
         rv.layoutManager = LinearLayoutManager(this)
-        rv.adapter = ProviderAdapter(providers)
+        providerAdapter = ProviderAdapter(providers)
+        rv.adapter = providerAdapter
     }
 
     private fun getProvidersForService(serviceName: String): List<Provider> {
@@ -74,6 +87,10 @@ class ServiceDetailActivity : AppCompatActivity() {
                 Provider("David Miller", 4.4f, 33, "1.5 km", android.R.drawable.ic_menu_myplaces),
                 Provider("Robert Pattinson", 4.9f, 67, "3.2 km", android.R.drawable.ic_menu_myplaces),
                 Provider("Chris Evans", 4.1f, 15, "7 km", android.R.drawable.ic_menu_myplaces)
+            )
+            upperName.contains("ELECTRIC") -> listOf(
+                Provider("Nikola Tesla", 5.0f, 150, "1.2 km", android.R.drawable.ic_menu_myplaces),
+                Provider("Thomas Edison", 4.8f, 95, "2.8 km", android.R.drawable.ic_menu_myplaces)
             )
             else -> listOf(
                 Provider("General Provider 1", 4.0f, 10, "1 km", android.R.drawable.ic_menu_myplaces),
